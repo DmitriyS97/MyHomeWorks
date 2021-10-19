@@ -3,97 +3,100 @@
 #include<vector>
 using namespace std;
 
+
 struct Node
 {
 	string student;
 	Node* next = nullptr;
-	Node* previouse = nullptr;
-	int counter = 1;
+	Node* previouse = nullptr;	
 };
 
-void creatList(Node** head, string newName)
+void creatList(Node** head, string newName) 
 {
 	Node* tmp = new Node;
-	if (*head) {
-		(*head)->next = tmp;
-		tmp->counter = (*head)->counter + 1;
-	}
+	if (*head) 	(*head)->next = tmp;	
 	tmp->previouse = *head;
 	tmp->student = newName;
 	*head = tmp;
 }
 
-void insert(Node* head, int idx, string newName)
-{
-	while (head)
-	{
-		if (idx > head->counter)
-		{
-			cout << "You entered wrong index";
-			return;
-		}
-		else if (head->counter == idx)
-		{
-			Node* tmp = new Node;
 
-			tmp->counter = idx;
-			tmp->student = newName;
-			tmp->next = head;
-			tmp->previouse = head->previouse;
-			head->previouse = tmp;
-			head->counter++;
-			head = tmp;
-			head = head->previouse;
-			if (head) head->next = tmp;
-			return;
-		}
-		else
-		{
-			head->counter++;
-			head = head->previouse;
-		}
-	}
-}
-void del(Node* head, int idx)
+void insert(Node** head, int idx, string newName)
 {
-	while (head)
+	for (int i = 1; i < idx; i++)
 	{
-		if (idx == head->counter)
-		{
-			Node* tmp = new Node;
-			Node* n, * p;
-			n = head->next;
-			p = head->previouse;
-			tmp = head;
-			n->previouse = p;
-			p->next = n;
-			delete tmp;
-			return;
-		}
-		else
-		{
-			head->counter--;
-			head = head->previouse;
-		}
+		*head = (*head)->next;
 	}
+	Node* tmp = new Node;
+	
+	Node* p= (*head)->previouse;
+	tmp->student = newName;
+	tmp->next = *head;
+	tmp->previouse = (*head)->previouse;
+	(*head)->previouse = tmp;
+	if (p) p->next = tmp;	
+	*head = tmp;	
 }
+
+
+void del(Node** head, int idx)
+{
+	for (int i = 1; i < idx; i++)
+	{
+		*head = (*head)->next;
+	}
+	Node* tmp = new Node;
+	Node* nextNode, * prevNode;
+	nextNode = (*head)->next;
+	prevNode = (*head)->previouse;
+	tmp = *head;	
+	if (nextNode)
+	{
+		nextNode->previouse = prevNode;
+		*head = (*head)->next;
+	}
+	if (prevNode)
+	{
+		prevNode->next = nextNode;
+		*head = (*head)->previouse;
+	}
+	
+	delete tmp;	
+}
+
+
 Node* get(Node* head, int idx)
 {
-	while (head) {
-		if (head->counter == idx) return head;
-		else head = head->previouse;
+	for (int i = 1; i < idx; i++)
+	{
+		head = head->next;
 	}
+	return head;
 }
+
 
 void gPrint(Node* head)
 {
 	while (head)
 	{
-		cout << head->counter << " - " << head->student << endl;
-		head = head->previouse;
+		cout <<head->student << endl;
+		head = head->next;
 	}
 	cout << '\n';
 }
+
+
+void reposition(Node** head)
+{
+	Node* t=*head;
+	while (*head)
+	{		
+			t = *head;
+			*head = (*head)->previouse;			
+	}
+	*head = t;
+}
+
 
 int main()
 {
@@ -102,16 +105,20 @@ int main()
 	for (int i = 0; i <= group.size() - 1; i++)
 	{
 		creatList(&head, group[i]);
-	}
-
+	}	
+	reposition(&head);
 	gPrint(head);
-	insert(head, 4, "Alex");
+	
+	insert(&head, 5, "Alex");	
+	reposition(&head);
 	gPrint(head);
 
-	Node* p = get(head, 3);
-	cout << p->student << "\n\n";
-
-	del(head, 2);
+	Node* getName = get(head, 3);
+	cout << getName->student << "\n\n";
+	
+	del(&head, 3);	
+	reposition(&head);
 	gPrint(head);
+	
 	return 0;
 }
