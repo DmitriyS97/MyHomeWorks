@@ -74,7 +74,8 @@ void del(Node** head, int idx)
 		return;
 	}
 	for (int i = 0; i < idx-1; i++)
-	{	
+	{
+		if (tHead->next->next == nullptr) return;
 		tHead = tHead->next;
 	}
 	tmp = tHead->next;
@@ -123,7 +124,7 @@ int main()
 	if (getName == nullptr) cout << "Inccorect index\n\n";
 	else cout << getName->student << "\n\n";
 	
-	del(&head, 0);		
+	del(&head, 8);		
 	gPrint(head);
 	
 	return 0;
