@@ -13,65 +13,86 @@ struct Node
 
 void creatList(Node** head, string newName) 
 {
+	Node* tHead = *head;
 	Node* tmp = new Node;
-	if (*head) 	(*head)->next = tmp;	
-	tmp->previouse = *head;
 	tmp->student = newName;
-	*head = tmp;
+	if ((*head)==nullptr)
+	{		
+		*head = tmp;
+		return;
+	}
+	while (tHead->next != nullptr) tHead = tHead->next;
+	tHead->next = tmp;
+	tmp->previouse = tHead;	
 }
 
 
 void insert(Node** head, int idx, string newName)
-{
-	for (int i = 1; i < idx; i++)
-	{
-		*head = (*head)->next;
-	}
+{	
+	Node* tHead = *head;
 	Node* tmp = new Node;
-	
-	Node* p= (*head)->previouse;
 	tmp->student = newName;
-	tmp->next = *head;
-	tmp->previouse = (*head)->previouse;
-	(*head)->previouse = tmp;
-	if (p) p->next = tmp;	
-	*head = tmp;	
+	if (idx == 0 )
+	{
+		if ((*head)== nullptr)
+		{
+			*head = tmp;
+			return;
+		}
+		tmp->next = *head;
+		(*head)->previouse = tmp;
+		(*head) = (*head)->previouse;
+		return;
+	}	
+	for (int i = 0; i < idx; i++)
+	{
+		if (tHead->next == nullptr)
+		{
+			tmp->previouse = tHead;
+			tHead->next = tmp;
+			return;
+		}
+		tHead = tHead->next;		
+	}
+	tmp->next = tHead;
+	tmp->previouse = tHead->previouse;
+	tHead->previouse->next = tmp;
+	tHead->previouse = tmp;	
 }
 
 
 void del(Node** head, int idx)
 {
-	for (int i = 1; i < idx; i++)
-	{
-		*head = (*head)->next;
-	}
+	Node* tHead = *head;	
 	Node* tmp = new Node;
-	Node* nextNode, * prevNode;
-	nextNode = (*head)->next;
-	prevNode = (*head)->previouse;
-	tmp = *head;	
-	if (nextNode)
+	if (idx == 0)
 	{
-		nextNode->previouse = prevNode;
+		tmp = *head;
 		*head = (*head)->next;
+		(*head)->previouse = nullptr;
+		delete tmp;
+		return;
 	}
-	if (prevNode)
-	{
-		prevNode->next = nextNode;
-		*head = (*head)->previouse;
+	for (int i = 0; i < idx-1; i++)
+	{	
+		tHead = tHead->next;
 	}
-	
+	tmp = tHead->next;
+	tHead->next = tmp->next;
+	if (tmp->next) tmp->next->previouse = tHead;
 	delete tmp;	
 }
 
 
-Node* get(Node* head, int idx)
+Node* get(Node** head, int idx)
 {
-	for (int i = 1; i < idx; i++)
+	Node* tHead = *head;
+	for (int i = 0; i < idx; i++)
 	{
-		head = head->next;
+		tHead = tHead->next;
+		if (tHead == nullptr) return nullptr;
 	}
-	return head;
+	return tHead;
 }
 
 
@@ -85,39 +106,24 @@ void gPrint(Node* head)
 	cout << '\n';
 }
 
-
-void reposition(Node** head)
-{
-	Node* t=*head;
-	while (*head)
-	{		
-			t = *head;
-			*head = (*head)->previouse;			
-	}
-	*head = t;
-}
-
-
 int main()
-{
+{	
 	Node* head = nullptr;
 	vector<string> group = { "Jack", "Bob","Rick","Clark","Grigoriy" };
 	for (int i = 0; i <= group.size() - 1; i++)
 	{
-		creatList(&head, group[i]);
-	}	
-	reposition(&head);
+		creatList(&head, group[i]);		
+	}		
 	gPrint(head);
 	
-	insert(&head, 5, "Alex");	
-	reposition(&head);
-	gPrint(head);
-
-	Node* getName = get(head, 3);
-	cout << getName->student << "\n\n";
+	insert(&head, 1, "Alex");		
+	gPrint(head);	
 	
-	del(&head, 3);	
-	reposition(&head);
+	Node* getName = get(&head, 0);
+	if (getName == nullptr) cout << "Inccorect index\n\n";
+	else cout << getName->student << "\n\n";
+	
+	del(&head, 0);		
 	gPrint(head);
 	
 	return 0;
