@@ -1,0 +1,6 @@
+﻿  main.cpp
+E:\GitHomeWork\Restaurant\Restaurant\main.cpp(60,21): warning C4018: '<': signed/unsigned mismatch
+E:\GitHomeWork\Restaurant\Restaurant\main.cpp(74,15): warning C4101: 'price': unreferenced local variable
+E:\GitHomeWork\Restaurant\Restaurant\main.cpp(74,7): warning C4101: 'weight': unreferenced local variable
+E:\GitHomeWork\Restaurant\Restaurant\main.cpp(74,22): warning C4101: 'kalor': unreferenced local variable
+  Restaurant.vcxproj -> E:\GitHomeWork\Restaurant\Debug\Restaurant.exe
