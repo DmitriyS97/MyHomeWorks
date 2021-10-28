@@ -1,2 +1,91 @@
-﻿  main.cpp
-  Arena.vcxproj -> E:\GitHomeWork\Arena\Debug\Arena.exe
+﻿  character.cpp
+E:\GitHomeWork\Arena\Arena\inventory.h(7,9): error C3646: 'name': unknown override specifier
+E:\GitHomeWork\Arena\Arena\inventory.h(7,14): error C2059: syntax error: '='
+E:\GitHomeWork\Arena\Arena\inventory.h(7,23): error C2238: unexpected token(s) preceding ';'
+E:\GitHomeWork\Arena\Arena\inventory.h(15,9): error C3646: 'name': unknown override specifier
+E:\GitHomeWork\Arena\Arena\inventory.h(15,14): error C2059: syntax error: '='
+E:\GitHomeWork\Arena\Arena\inventory.h(15,25): error C2238: unexpected token(s) preceding ';'
+E:\GitHomeWork\Arena\Arena\inventory.h(20,9): error C3646: 'name': unknown override specifier
+E:\GitHomeWork\Arena\Arena\inventory.h(20,14): error C2059: syntax error: '='
+E:\GitHomeWork\Arena\Arena\inventory.h(20,25): error C2238: unexpected token(s) preceding ';'
+E:\GitHomeWork\Arena\Arena\inventory.h(26,18): error C2061: syntax error: identifier 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.h(29,17): error C2061: syntax error: identifier 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.h(30,17): error C2061: syntax error: identifier 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.h(31,16): error C2061: syntax error: identifier 'Character'
+E:\GitHomeWork\Arena\Arena\character.cpp(24,30): error C2039: 'name': is not a member of 'Weapon'
+E:\GitHomeWork\Arena\Arena\inventory.h(5): message : see declaration of 'Weapon'
+E:\GitHomeWork\Arena\Arena\character.cpp(25,31): error C2039: 'name': is not a member of 'Shield'
+E:\GitHomeWork\Arena\Arena\inventory.h(18): message : see declaration of 'Shield'
+E:\GitHomeWork\Arena\Arena\character.cpp(25,59): error C2039: 'name': is not a member of 'Armor'
+E:\GitHomeWork\Arena\Arena\inventory.h(13): message : see declaration of 'Armor'
+  inventory.cpp
+E:\GitHomeWork\Arena\Arena\character.h(9,9): error C3646: 'weapon': unknown override specifier
+E:\GitHomeWork\Arena\Arena\character.h(9,15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\GitHomeWork\Arena\Arena\character.h(10,9): error C3646: 'shield': unknown override specifier
+E:\GitHomeWork\Arena\Arena\character.h(10,15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\GitHomeWork\Arena\Arena\character.h(11,8): error C3646: 'armor': unknown override specifier
+E:\GitHomeWork\Arena\Arena\character.h(11,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\GitHomeWork\Arena\Arena\inventory.h(7,9): error C3646: 'name': unknown override specifier
+E:\GitHomeWork\Arena\Arena\inventory.h(7,14): error C2059: syntax error: '='
+E:\GitHomeWork\Arena\Arena\inventory.h(7,23): error C2238: unexpected token(s) preceding ';'
+E:\GitHomeWork\Arena\Arena\inventory.h(15,9): error C3646: 'name': unknown override specifier
+E:\GitHomeWork\Arena\Arena\inventory.h(15,14): error C2059: syntax error: '='
+E:\GitHomeWork\Arena\Arena\inventory.h(15,25): error C2238: unexpected token(s) preceding ';'
+E:\GitHomeWork\Arena\Arena\inventory.h(20,9): error C3646: 'name': unknown override specifier
+E:\GitHomeWork\Arena\Arena\inventory.h(20,14): error C2059: syntax error: '='
+E:\GitHomeWork\Arena\Arena\inventory.h(20,25): error C2238: unexpected token(s) preceding ';'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(11,35): error C2039: 'shield': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(11,63): error C2039: 'armor': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(24,16): error C2039: 'weapon': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(25,16): error C2039: 'weapon': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(26,16): error C2039: 'weapon': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(27,16): error C2039: 'weapon': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(28,16): error C2039: 'weapon': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(33,16): error C2039: 'weapon': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(34,16): error C2039: 'weapon': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(35,16): error C2039: 'weapon': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(36,16): error C2039: 'weapon': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(37,16): error C2039: 'weapon': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(58,16): error C2039: 'shield': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(59,16): error C2039: 'shield': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(85,16): error C2039: 'armor': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(86,16): error C2039: 'armor': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(91,16): error C2039: 'armor': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(92,16): error C2039: 'armor': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(97,16): error C2039: 'armor': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.cpp(98,16): error C2039: 'armor': is not a member of 'Character'
+E:\GitHomeWork\Arena\Arena\character.h(6): message : see declaration of 'Character'
+  main.cpp
+E:\GitHomeWork\Arena\Arena\inventory.h(7,9): error C3646: 'name': unknown override specifier
+E:\GitHomeWork\Arena\Arena\inventory.h(7,14): error C2059: syntax error: '='
+E:\GitHomeWork\Arena\Arena\inventory.h(7,23): error C2238: unexpected token(s) preceding ';'
+E:\GitHomeWork\Arena\Arena\inventory.h(15,9): error C3646: 'name': unknown override specifier
+E:\GitHomeWork\Arena\Arena\inventory.h(15,14): error C2059: syntax error: '='
+E:\GitHomeWork\Arena\Arena\inventory.h(15,25): error C2238: unexpected token(s) preceding ';'
+E:\GitHomeWork\Arena\Arena\inventory.h(20,9): error C3646: 'name': unknown override specifier
+E:\GitHomeWork\Arena\Arena\inventory.h(20,14): error C2059: syntax error: '='
+E:\GitHomeWork\Arena\Arena\inventory.h(20,25): error C2238: unexpected token(s) preceding ';'
+E:\GitHomeWork\Arena\Arena\inventory.h(26,18): error C2061: syntax error: identifier 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.h(29,17): error C2061: syntax error: identifier 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.h(30,17): error C2061: syntax error: identifier 'Character'
+E:\GitHomeWork\Arena\Arena\inventory.h(31,16): error C2061: syntax error: identifier 'Character'
+  Generating Code...
