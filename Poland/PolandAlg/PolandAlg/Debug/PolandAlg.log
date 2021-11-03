@@ -1,3 +1,6 @@
 ﻿  main.cpp
-E:\GitHomeWork\Poland\PolandAlg\PolandAlg\main.cpp(96): warning C4715: 'operations': not all control paths return a value
+E:\GitHomeWork\Poland\PolandAlg\PolandAlg\main.cpp(12,23): warning C4018: '<': signed/unsigned mismatch
+E:\GitHomeWork\Poland\PolandAlg\PolandAlg\main.cpp(67,23): warning C4018: '<': signed/unsigned mismatch
+E:\GitHomeWork\Poland\PolandAlg\PolandAlg\main.cpp(139,19): warning C4018: '<': signed/unsigned mismatch
+E:\GitHomeWork\Poland\PolandAlg\PolandAlg\main.cpp(134): warning C4715: 'operations': not all control paths return a value
   PolandAlg.vcxproj -> E:\GitHomeWork\Poland\PolandAlg\Debug\PolandAlg.exe
