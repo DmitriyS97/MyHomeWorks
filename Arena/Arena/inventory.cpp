@@ -1,5 +1,6 @@
 #include<iostream>
 #include"inventory.h"
+#include"character.h"
 
 using namespace std;
 
@@ -12,13 +13,18 @@ void Inventory::startEquip(Character* ptrCharInv)
 }
 void Inventory::getWeapon(Character* ptrCharInv)
 {
-	cout << "Choose weapon:\n";
-	cout << "1) Sword (damage: 7, stamina: -5, accurcy: 80)\n";
-	cout << "2) Dagger (damage: 5, stamina: -2, accurcy: 95)\n";
+	if (ptrCharInv->bot == false) {
+		cout << "Choose weapon:\n";
+		cout << "1) Sword (damage: 7, stamina: -5, accurcy: 80)\n";
+		cout << "2) Dagger (damage: 5, stamina: -2, accurcy: 95)\n";
+	}
 	int answer = 0;
 	while (answer == 0)
-	{
-		cin >> answer;
+	{		
+		if (ptrCharInv->bot == true)
+		{
+			answer = getRandomNumber(1, 2);
+		} else cin >> answer;
 		if (answer == 1)
 		{
 			ptrCharInv->weapon.name = "Sword";
@@ -46,13 +52,19 @@ void Inventory::getWeapon(Character* ptrCharInv)
 }
 void Inventory::getShield(Character* ptrCharInv)
 {
-	cout << "Choose shield:\n";
-	cout << "1) Shield (defens: +5)\n";
-	cout << "2) Dont take)\n";
+	if (ptrCharInv->bot == false) {
+		cout << "Choose shield:\n";
+		cout << "1) Shield (defens: +5)\n";
+		cout << "2) Dont take)\n";
+	}
 	int answer = 0;
 	while (answer == 0)
 	{
-		cin >> answer;
+		if (ptrCharInv->bot == true)
+		{
+			answer = getRandomNumber(1, 2);
+		}
+		else cin >> answer;
 		if (answer == 1)
 		{
 			ptrCharInv->shield.name = "Shield";
@@ -72,14 +84,20 @@ void Inventory::getShield(Character* ptrCharInv)
 }
 void Inventory::getArmor(Character* ptrCharInv)
 {
-	cout << "Choose armor:\n";
-	cout << "1) Light Armor (defens: +5)\n";
-	cout << "2) Medium Armor (defens: +10)\n";
-	cout << "3) Heavy Armor (defens: +15)\n";
+	if (ptrCharInv->bot == false) {
+		cout << "Choose armor:\n";
+		cout << "1) Light Armor (defens: +5)\n";
+		cout << "2) Medium Armor (defens: +10)\n";
+		cout << "3) Heavy Armor (defens: +15)\n";
+	}
 	int answer = 0;
 	while (answer == 0)
 	{
-		cin >> answer;
+		if (ptrCharInv->bot == true)
+		{
+			answer = getRandomNumber(1, 3);
+		}
+		else cin >> answer;
 		if (answer == 1)
 		{
 			ptrCharInv->armor.name = "Light Armor";

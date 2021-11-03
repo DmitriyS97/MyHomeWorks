@@ -13,8 +13,9 @@ public:
 	int HP;
 	int stamina;
 	int dodge;
-	int defens;
+	int defens;	
+	bool bot;
 
-	void setAtributes();
+	void setAtributes(bool isBot);
 	void showInfo();	
 };

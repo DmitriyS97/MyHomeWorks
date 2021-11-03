@@ -1,0 +1,3 @@
+﻿  main.cpp
+E:\GitHomeWork\Poland\PolandAlg\PolandAlg\main.cpp(96): warning C4715: 'operations': not all control paths return a value
+  PolandAlg.vcxproj -> E:\GitHomeWork\Poland\PolandAlg\Debug\PolandAlg.exe

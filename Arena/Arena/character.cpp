@@ -2,8 +2,9 @@
 #include"character.h"
 using namespace std;
 
-void Character::setAtributes()
+void Character::setAtributes(bool isBot)
 {
+	bot = isBot;
 	strenght = getRandomNumber(10, 20);
 	dexterity = getRandomNumber(10, 20);
 	HP = getRandomNumber(150, 250);
@@ -22,6 +23,6 @@ void Character::showInfo()
 	cout << "defens: " << defens << endl << endl;
 	cout << "Equipment:" << endl;
 	cout << "Weapon " << weapon.name << " damage: " << weapon.min_damage << "-" << weapon.max_damage << endl;
-	cout << "Shield: " << shield.name << " Armor: " << armor.name << endl << endl;
-	
+	cout << "Shield: " << shield.name << " Armor: " << armor.name << endl << endl;	
 }
+
